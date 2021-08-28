@@ -36,5 +36,5 @@ WHERE NOT length > 50
 AND rental_rate != 2.99 
 OR rental_rate != 4.99
 
--- rental_rate için farklılık olması amacıyla NOT kullanmadım. Aynı sonuca NOT ile de ulaşılabilir. Ya da 2.99 veya 4.99 olmayan veriler listelenebilecek şekilde sorgu oluşturulabilir fakat son istek biraz daha detaylandırılsa iyi olabilirdi.
+-- rental_rate için farklılık olması amacıyla NOT kullanmadım. Aynı sonuca NOT ile de ulaşılabilir. Ya da 2.99 **VE** 4.99 olmayan veriler listelenebilecek şekilde sorgu oluşturulabilir fakat son istek biraz daha detaylandırılsa iyi olabilirdi.
 ```
