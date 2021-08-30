@@ -1,5 +1,5 @@
 # 1
->actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+>**actor** ve **customer** tablolarında bulunan **first_name** sütunları için tüm verileri sıralayalım.
 ```SQL
 (
 SELECT first_name FROM actor
@@ -12,7 +12,7 @@ SELECT first_name FROM customer
 ```
 
 # 2
->actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+>**actor** ve **customer** tablolarında bulunan **first_name** sütunları için kesişen verileri sıralayalım.
 ```SQL
 (
 SELECT first_name FROM actor
@@ -25,7 +25,7 @@ SELECT first_name FROM customer
 ```
 
 # 3
->actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+>**actor** ve **customer** tablolarında bulunan **first_name** sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
 ```SQL
 (
 SELECT first_name FROM actor
