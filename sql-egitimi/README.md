@@ -14,7 +14,7 @@
 - Data Nedir?
 - Database Nedir?
 - DBMS Nedir?
-- RDBDM Nedir?
+- RDBMS Nedir?
 - Query
 - - SELECT
 - - WHERE
