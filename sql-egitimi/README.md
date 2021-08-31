@@ -50,8 +50,8 @@
 <br/><br/><br/><br/><br/>
 
 # SQL *(Structered Query Langugae)* Nedir?
-    SQL, verileri yönetmek ve tasarlamak için kulalnılan bir dildir. SQL, veritabanı yönetim sisteleri ile ilişki kurmayı sağlayacan declarative yani bildirimsel bir 4.nesil programlama dilidir.  
-    Türkçe ifadesiyle Yapılandırılmış Sorgu Dili anlamına gelmektedir. SQL sayesinde verilerin bulunduğu veritabanı ile iletişime geçilir.
+SQL, verileri yönetmek ve tasarlamak için kulalnılan bir dildir. SQL, veritabanı yönetim sisteleri ile ilişki kurmayı sağlayacan declarative yani bildirimsel bir 4.nesil programlama dilidir.  
+Türkçe ifadesiyle Yapılandırılmış Sorgu Dili anlamına gelmektedir. SQL sayesinde verilerin bulunduğu veritabanı ile iletişime geçilir.
 
 ## **ÖRNEK SQL Sorgusu**
 ```SQL
