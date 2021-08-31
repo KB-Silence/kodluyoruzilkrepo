@@ -5,7 +5,6 @@
 
 ## Patika.dev - SQL eğitimi kapsamındaki içeriklere göre hazırlanmıştır.  
 > Ufak düzeyde değişiklikler ve düzenlemeler yapıldı.
-
 <br/>
 
 ---
@@ -49,7 +48,7 @@
 ---
 <br/><br/><br/><br/><br/>
 
-# SQL *(Structered Query Langugae)* Nedir?
+# SQL *(Structered Query Language)* Nedir?
 SQL, verileri yönetmek ve tasarlamak için kulalnılan bir dildir. SQL, veritabanı yönetim sisteleri ile ilişki kurmayı sağlayacan declarative yani bildirimsel bir 4.nesil programlama dilidir.  
 Türkçe ifadesiyle Yapılandırılmış Sorgu Dili anlamına gelmektedir. SQL sayesinde verilerin bulunduğu veritabanı ile iletişime geçilir.
 
@@ -85,7 +84,7 @@ SQL'in, ***DBMS(Database Management System)*** ile nasıl çalıştığının, a
 <br/>
 
 # Database Management System(DBMS) Nedir?
-    Veritabanı verilerimizi organize bir şekilde depolamamızı sağlayan yapılardır. Veritabanımızı oluşturmamızı, yönetmemizi ve SQL yardımıyla gerekli gördüğümüz sorguları oluşturmamızı sağlayan yazılımlara Database Management System(DBMS) adı verilir. SQL sorguları sayesinde veritabanı üzerinde yapmak istediğimiz işlemleri, veritabanı yönetim sistemi yazılımı aracaılığıyla yaparız.
+Veritabanı verilerimizi organize bir şekilde depolamamızı sağlayan yapılardır. Veritabanımızı oluşturmamızı, yönetmemizi ve SQL yardımıyla gerekli gördüğümüz sorguları oluşturmamızı sağlayan yazılımlara Database Management System(DBMS) adı verilir. SQL sorguları sayesinde veritabanı üzerinde yapmak istediğimiz işlemleri, veritabanı yönetim sistemi yazılımı aracaılığıyla yaparız.
 <br/>
 Farklı ihtiyaçlara göre çeşitli veritabanı yönetim sistemleri bulunur.
 
@@ -98,7 +97,7 @@ Farklı ihtiyaçlara göre çeşitli veritabanı yönetim sistemleri bulunur.
 <br/>
 
 # İlişkisel Veritabanı Yönetim Sistemleri
-    İlişkisel veritabanı yönetim sistemlerinde veriler satır ve sütunlardan oluşan tablolarda tutulur. Her sütunda aynı tür verilerin tutulması sebebiyle yüksek bir veri tutarlılığına sahiptir.
+İlişkisel veritabanı yönetim sistemlerinde veriler satır ve sütunlardan oluşan tablolarda tutulur. Her sütunda aynı tür verilerin tutulması sebebiyle yüksek bir veri tutarlılığına sahiptir.
 
 ### Bazı Popüler Veritabanı Yönetim Sistemleri;
 - Oracle
@@ -115,7 +114,7 @@ Farklı ihtiyaçlara göre çeşitli veritabanı yönetim sistemleri bulunur.
 <br/>
 
 # SELECT
-    SELECT en çok kullanılan SQL komutudur ve veritabanında belirtilen sütunlardaki verileri çekmemizi sağlar. Ayrıca SELECT komutunu çoğunlukla diğer SQL komutlarıyla birlikte kullanırız.
+SELECT en çok kullanılan SQL komutudur ve veritabanında belirtilen sütunlardaki verileri çekmemizi sağlar. Ayrıca SELECT komutunu çoğunlukla diğer SQL komutlarıyla birlikte kullanırız.
 
 ## **SELECT Söz Dizimi**
 ```SQL
@@ -127,7 +126,7 @@ SELECT * FROM table_name;
 ```
 
 # WHERE
-    Çoğu durumda verilerin tamamını değil belirli koşulları sağlayan verileri görmek isteriz. Bunun için WHERE anahtar kelimesini kullanırız.
+Çoğu durumda verilerin tamamını değil belirli koşulları sağlayan verileri görmek isteriz. Bunun için WHERE anahtar kelimesini kullanırız.
 
 ### WHERE Söz Dizimi
 ```SQL
@@ -148,14 +147,14 @@ Operatör    |   Açıklama    | Operatör  | Açıklama
 ## **Mantıksal Operatörler**
     Çoğu durumda birden fazla koşulu gerçekleştirmek isteriz bunun için mantıksal operatörlerden faydalanırız.
 
-## **AND(Ve)**
-    Veri gelmesi için AND operatörünün sağına ve soluna yazılan koşulların ikisinin de TRUE sonuç döndürmesi gerekiyor. Eğer koşullardan bir tanesi TRUE diğeri FALSE sonuç dönerse işlem FALSE olur ve veri getirilmez.
+## **AND (Ve)**
+Veri gelmesi için AND operatörünün sağına ve soluna yazılan koşulların ikisinin de TRUE sonuç döndürmesi gerekiyor. Eğer koşullardan bir tanesi TRUE diğeri FALSE sonuç dönerse işlem FALSE olur ve veri getirilmez.
 ```SQL
 SELECT * FROM table_name WHERE condition AND condition
 ```
 
-## **OR(Veya)**
-    Veri gelmesi için OR operatörünün sağına ve soluna yazılan koşulların bir tanesinden TRUE sonuç dönmesi gerekmekte. Eğer koşullardan bir tanesi TRUE diğeri FALSE sonuç dönerse işlem TRUE olur ve veri getirilir.
+## **OR (Veya)**
+Veri gelmesi için OR operatörünün sağına ve soluna yazılan koşulların bir tanesinden TRUE sonuç dönmesi gerekmekte. Eğer koşullardan bir tanesi TRUE diğeri FALSE sonuç dönerse işlem TRUE olur ve veri getirilir.
 ```SQL
 SELECT * FROM table_name WHERE condition OR condition
 ```
@@ -174,7 +173,7 @@ WHERE column_name IN (value1, value2, value3 ...)
 ```
 
 # **LIKE**
-    Bazı durumlarda tam eşleşme değil, belirli şablonlara uyan koşulların sağlanmasını isteyebiliriz. Örneğin; first_name sütununa göre sorgu hazırlarken tam değeri yazmak yerine ilk harfin ne olacağını belirtiriz ve karakter tutucu operatörü ekleriz. Bu gibi durumlarda LIKE operatörünü kullanırız.
+Bazı durumlarda tam eşleşme değil, belirli şablonlara uyan koşulların sağlanmasını isteyebiliriz. Örneğin; first_name sütununa göre sorgu hazırlarken tam değeri yazmak yerine ilk harfin ne olacağını belirtiriz ve karakter tutucu operatörü ekleriz. Bu gibi durumlarda LIKE operatörünü kullanırız.
 
 ```SQL
 SELECT column_name, column_name ... FROM table_name
@@ -218,14 +217,14 @@ WHERE condition_column_name LIKE 'P%'
 > **Min -> Minimum değer olarak A'yı baz alır.**
 
 ## **DISTINCT**
-    Çoğu durumda aynı sütun içerisinde birbirinin aynı, birbrini tekrar eden veriler ile karşılaşabiliriz. Bu gibi durumlarda bir sütun içerisinde bulunan farklı değerleri görmek için DISTINCT anahtar kelimesini kullanırız.
+Çoğu durumda aynı sütun içerisinde birbirinin aynı, birbrini tekrar eden veriler ile karşılaşabiliriz. Bu gibi durumlarda bir sütun içerisinde bulunan farklı değerleri görmek için DISTINCT anahtar kelimesini kullanırız.
 
 ```SQL
 SELECT DISTINCT column_name FROM table_name
 ```
 
 ## **COUNT**
-    COUNT aggregate fonksiyonu ilgili sorgu sonucunda oluşan veri sayısını bildirir. Yani normal bir SELECT sorgusu ya da WHERE ile koşullu bir sorgu gerçekleştirdiğimizde kaç tane veri geldiğini öğrenmek için COUNT fonksiyonunu kullanabiliriz.
+COUNT aggregate fonksiyonu ilgili sorgu sonucunda oluşan veri sayısını bildirir. Yani normal bir SELECT sorgusu ya da WHERE ile koşullu bir sorgu gerçekleştirdiğimizde kaç tane veri geldiğini öğrenmek için COUNT fonksiyonunu kullanabiliriz.
 
 ```SQL
 SELECT COUNT(*) FROM table_name WHERE condition
@@ -317,7 +316,7 @@ ORDER BY column_name ASC, column_name DESC
 ```
 
 # GROUP BY
-    Aynı değerlere sahip verileri gruplamamızı sağlar. GROUP BY komutu verileri bir veya daha fazla sütunla gruplamak için aggregate fonksiyonları kullanır. 
+Aynı değerlere sahip verileri gruplamamızı sağlar. GROUP BY komutu verileri bir veya daha fazla sütunla gruplamak için aggregate fonksiyonları kullanır. 
 
     (COUNT, MAX, MIN, AVG, SUM)
 ```SQL
@@ -326,7 +325,7 @@ GROUP BY column_name(s)
 ```
 
 # HAVING
-    HAVING sadece GROUP BY anahtar kelimesiyle birlikte kullanılır. İşlevi WHERE ile aynı denilebilir. Gruplama yaptığımız verilere WHERE ifadesi ile koşul belirtemediğimiz için HAVING ifadesine ihtiyaç duyarız.
+HAVING sadece GROUP BY anahtar kelimesiyle birlikte kullanılır. İşlevi WHERE ile aynı denilebilir. Gruplama yaptığımız verilere WHERE ifadesi ile koşul belirtemediğimiz için HAVING ifadesine ihtiyaç duyarız.
 ```SQL
 SELECT column_name(s) FROM table_name 
 GROUP by column_name(s) 
@@ -334,7 +333,7 @@ HAVING condition
 ```
 
 # LIMIT
-    Bazı durumlarda koşulları sağlayan verilerin tamamını değil belirli bir sayı kadar sıralamak isteriz, bunun için LIMIT anahtar kelimesini kullanırız.
+Bazı durumlarda koşulları sağlayan verilerin tamamını değil belirli bir sayı kadar sıralamak isteriz, bunun için LIMIT anahtar kelimesini kullanırız.
 
 ```SQL
 SELECT column_name, column_name FROM table_name
@@ -344,7 +343,7 @@ LIMIT value
 ```
 
 # OFFSET
-    Bazı durumlarda sonuç olarak gördüğümüz eri grubu içerisinden bazılarını "pass" geçmek isteyebiliriz. Bu durumda OFFSET anahtar kelimesini kullanabiliriz.
+Bazı durumlarda sonuç olarak gördüğümüz eri grubu içerisinden bazılarını "pass" geçmek isteyebiliriz. Bu durumda OFFSET anahtar kelimesini kullanabiliriz.
 
 ```SQL
 SELECT column_name, column_name FROM table_name
@@ -352,8 +351,8 @@ OFFSET value
 -- value sayısal bir değer olmalıdır.
 ```
 
-# ALIAS(AS)
-    ALIAS ifadesi ile uzun ve kullanımı zor olan tablo veya alan adlarına geçici olarak kısa isimler(takma isimler) vererek bu alanları/tabloları daha kolay kullanabiliriz. Böylece mevcut tablo yapısını bozmadan anlık olarak belirlediğimiz isimleri kullanabiliriz.
+# ALIAS (AS)
+ALIAS ifadesi ile uzun ve kullanımı zor olan tablo veya alan adlarına geçici olarak kısa isimler(takma isimler) vererek bu alanları/tabloları daha kolay kullanabiliriz. Böylece mevcut tablo yapısını bozmadan anlık olarak belirlediğimiz isimleri kullanabiliriz.
     Geçici isimlendirme yaparken Türkçe karakter kullanılmamalıdır.
 
 ```SQL
@@ -363,7 +362,7 @@ SELECT first_name AS f FROM customers AS c
 ```
 
 # Tablo Oluşturmak
-    SQL ile yeni bir tablo oluşturmak için CREATE anahtar kelimesi kullanılır. Sütunlara verilecek isim, sütunların veri tipi ve varsa sütunlarda bulunacak kısıtlama yapıları CREATE ile belirlenebilir.
+SQL ile yeni bir tablo oluşturmak için CREATE anahtar kelimesi kullanılır. Sütunlara verilecek isim, sütunların veri tipi ve varsa sütunlarda bulunacak kısıtlama yapıları CREATE ile belirlenebilir.
 
 ```SQL
 CREATE TABLE table_name (
@@ -407,14 +406,14 @@ DELETE FROM table_name WHERE condition
 ```
 
 # PRIMARY KEY
-    Bir tabloda bulunan veri sıralarını birbirinden ayırmamızı sağlayan bir kısıtlama(constraint) yapısıdır. Tabloda bulunan veri sıralarına ait "benzersiz tanımlayıcıdır."
+Bir tabloda bulunan veri sıralarını birbirinden ayırmamızı sağlayan bir kısıtlama(constraint) yapısıdır. Tabloda bulunan veri sıralarına ait "benzersiz tanımlayıcıdır."
 
     - Benzersiz(Unique) olmalıdır.
     - NULL değere sahip olamaz.
     - Bir tabloda en fazla bir tane PRIMARY KEY bulunur.
 
 # FOREIGN KEY
-    Bir tabloda bulunan herhangi bir sütundaki verilerin genelde başka bir tablo sütununa referans vermesi durumudur. Tablolar arası ilişki kurulmasını sağlar.
+Bir tabloda bulunan herhangi bir sütundaki verilerin genelde başka bir tablo sütununa referans vermesi durumudur. Tablolar arası ilişki kurulmasını sağlar.
 
     - Bir tabloda birden fazla sütun FOREIGN KEY olarak tanımlanabilir.
     - Aynı sütun içerisinde aynı değerler bulunabilir.
@@ -442,7 +441,8 @@ bigserial       |-| 1 to 9223372036854775807
 character varying(n), varchar(n) | - | veriable-length with limit
 character(n), char(n) | - | fixed-length, blank padded
 text | - | veriable unlimited length
-    Sınırlı sayıda karakter kullanımı için VARCHAR veya CHAR veri tipleri kullanılır. VARCHAR veri tipi doldurulmayan karakterleri yok sayar, CHAR veri tipi ise doldurulmayan karakterler için boşluk bırakır. Sınırsız karakter kullanımı için ise TEXT veri tipi kullanılır.
+
+Sınırlı sayıda karakter kullanımı için VARCHAR veya CHAR veri tipleri kullanılır. VARCHAR veri tipi doldurulmayan karakterleri yok sayar, CHAR veri tipi ise doldurulmayan karakterler için boşluk bırakır. Sınırsız karakter kullanımı için ise TEXT veri tipi kullanılır.
 
 ## **Boolean Veri Tipi**
     TRUE, FALSE veya NULL(bilinmeyen) değerlerini alabilirler.
@@ -463,7 +463,7 @@ interval[fields][(p)]|-|time interal
 <br/>
 
 # NOT NULL
-    Birçok durumda herhangi bir sütuna yazılacak olan verilere belirli kısıtlamalar getirebiliriz. Örneğin; kullanıcı adı sütununda bilinmeyen(NULL) değerlerin olmasını isteyebiliriz. Bu durumda ilgili sütunda NOT NULL constraint kullanılır.
+Birçok durumda herhangi bir sütuna yazılacak olan verilere belirli kısıtlamalar getirebiliriz. Örneğin; kullanıcı adı sütununda bilinmeyen(NULL) değerlerin olmasını isteyebiliriz. Bu durumda ilgili sütunda NOT NULL constraint kullanılır.
 
     NULL bilinmeyen veri anlamına gelir. Boş string veya 0 verilerinden farklıdır.
 
@@ -489,7 +489,7 @@ SET NOT NULL
 ```
 
 # UNIQUE
-    UNIQUE kısıtlaması uyguladığımız sütundaki verilerin birbirinden farklı, benzersiz olmalarını isteriz. PRIMARY KEY kısıtlaması kendiliğinden UNIQUE kısıtlamasına sahiptir. CREATE TABLe ile tablo oluştururken veya önceden oluşturulmuş bir taloba ALTER komutu ile UNIQUE kısıtlamasını ekleyebiliriz.
+UNIQUE kısıtlaması uyguladığımız sütundaki verilerin birbirinden farklı, benzersiz olmalarını isteriz. PRIMARY KEY kısıtlaması kendiliğinden UNIQUE kısıtlamasına sahiptir. CREATE TABLe ile tablo oluştururken veya önceden oluşturulmuş bir taloba ALTER komutu ile UNIQUE kısıtlamasını ekleyebiliriz.
 
 ```SQL
 CREATE TABLE employees (
@@ -508,7 +508,7 @@ ADD UNIQUE(column_name)
 ```
 
 # CHECK
-    CHECK kısıtlaması ile uyguladığımız sütundaki verilere belirli koşullar verebiliriz. Örneğin; age(yaş) olarak belirlediğimiz bir sütuna negatif değerler girilmemesi ya da kayıt olan kullanıcıların yaşlarının 18'den büyük olması gibi kısıtlamalar uygulamak isteyebiliriz.
+CHECK kısıtlaması ile uyguladığımız sütundaki verilere belirli koşullar verebiliriz. Örneğin; age(yaş) olarak belirlediğimiz bir sütuna negatif değerler girilmemesi ya da kayıt olan kullanıcıların yaşlarının 18'den büyük olması gibi kısıtlamalar uygulamak isteyebiliriz.
 
 ```SQL
 CREATE TABLE table_name (
@@ -526,11 +526,11 @@ ADD CHECK (age > 18)
 
 <br/>
 
-# JOIN KAVRAMI(Birleştirme)
-    Veritabanları çoğunlukla birbiri ile ilişkili olan tablolardan oluşur. Birbiri ile ilişkili olan tablolardaki verileri farklı JOIN yapıları kullanarak sanal olarak birleştirip daha anlamlı veriler haline getirebiliriz.
+# JOIN KAVRAMI (Birleştirme)
+Veritabanları çoğunlukla birbiri ile ilişkili olan tablolardan oluşur. Birbiri ile ilişkili olan tablolardaki verileri farklı JOIN yapıları kullanarak sanal olarak birleştirip daha anlamlı veriler haline getirebiliriz.
 
 ## **INNER JOIN**
-    Bu yapı sayesinde birbiriyle ilişkili olan tabloların, birbiriyle eşleşen(kesişen) verilerini sıralayabiliriz.
+Bu yapı sayesinde birbiriyle ilişkili olan tabloların, birbiriyle eşleşen(kesişen) verilerini sıralayabiliriz.
 ```SQL
 SELECT column_name, column_name FROM table1
 INNER JOIN table2 ON table1.column_name = table2.column_name
@@ -539,7 +539,7 @@ INNER JOIN table2 ON table1.column_name = table2.column_name
 ```
 
 ## **LEFT JOIN**
-    Bu yapıdaki tablo birleştirmesinde, birleştirme işlemi TABLO1(soldaki tablo) üzerinden gerçekleştirilir. Tablo1'de ilgili sütundaki tüm verileri alır, sonrasında bu verilerin eşleştiği ilgili TABLO2 sütünundaki verileri alır. TABLO1'de olup TABLO2'de olmayan veriler için NULL değer kullanılır.
+Bu yapıdaki tablo birleştirmesinde, birleştirme işlemi TABLO1(soldaki tablo) üzerinden gerçekleştirilir. Tablo1'de ilgili sütundaki tüm verileri alır, sonrasında bu verilerin eşleştiği ilgili TABLO2 sütünundaki verileri alır. TABLO1'de olup TABLO2'de olmayan veriler için NULL değer kullanılır.
 
 ```SQL
 SELECT column_name, column_name FROM TABLE1
@@ -547,14 +547,14 @@ LEFT JOIN TABLE2 ON table1.column_name = table2.column_name;
 ```
 
 ## **RIGHT JOIN**
-    Bu yapıdaki tablo birleştirmesinde, birleştirme işlemi TABLO2(sağdaki tablo) üzerinden gerçekleştirilir. TABLO2'de ilgili sütundaki tüm verileri alır, sonrasında bu verilern eşleştiği ilgili TABLO1 sütunundaki verileri alır. TABLO2'de olup TABLO1'de olmayan veriler için NULL değer kullanılır.
+Bu yapıdaki tablo birleştirmesinde, birleştirme işlemi TABLO2(sağdaki tablo) üzerinden gerçekleştirilir. TABLO2'de ilgili sütundaki tüm verileri alır, sonrasında bu verilern eşleştiği ilgili TABLO1 sütunundaki verileri alır. TABLO2'de olup TABLO1'de olmayan veriler için NULL değer kullanılır.
 ```SQL
 SELECT column_name, column_name FROM TABLE1
 RIGHT JOIN TABLE2 ON table1.column_name = table2.column_name;
 ```
 
 ## **FULL JOIN**
-    Bu yapıdaki tablo birleştirmesinde, birleştirme işlemi her iki tablo üzerinden gerçekleştirilir. TABLO1'de ilgili sütundaki tüm verileri alır, sonrasında TABLO2'deki ilgili sütünlardan tüm verileri alır. TABLO1'de olup TABLO2'de olmayan ve TABLO2'de olup TABLO1'de olmayan veriler için NULL değer kullanılır.
+Bu yapıdaki tablo birleştirmesinde, birleştirme işlemi her iki tablo üzerinden gerçekleştirilir. TABLO1'de ilgili sütundaki tüm verileri alır, sonrasında TABLO2'deki ilgili sütünlardan tüm verileri alır. TABLO1'de olup TABLO2'de olmayan ve TABLO2'de olup TABLO1'de olmayan veriler için NULL değer kullanılır.
 ```SQL
 SELECT column_name, column_name FROM TABLE1
 FULL JOIN TABLE2 ON table1.column_name = table2.column_name;
@@ -581,7 +581,7 @@ FROM table2
 ```
 
 # INTERSECT
-    Intersect operatörü sayesinde farklı SELECT sorgularıyla oluşan sonuçların kesişen verilerini tek bir sonuç kümesi haline getiririz.
+Intersect operatörü sayesinde farklı SELECT sorgularıyla oluşan sonuçların kesişen verilerini tek bir sonuç kümesi haline getiririz.
 ```SQL
 (
 SELECT column_name, column_name FROM TABLE1
@@ -595,7 +595,7 @@ SELECT column_name, column_name FROM TABLE2
 ```
 
 # EXCEPT
-    Except operatörü sayesinde farklı SELECT sorgularıyla oluşan sonuçlardan ilk sorguda olup ikinci sorguda olmayan verileri tek bir sonuç kümesi haline getiririz.
+Except operatörü sayesinde farklı SELECT sorgularıyla oluşan sonuçlardan ilk sorguda olup ikinci sorguda olmayan verileri tek bir sonuç kümesi haline getiririz.
 
 ```SQL
 (
