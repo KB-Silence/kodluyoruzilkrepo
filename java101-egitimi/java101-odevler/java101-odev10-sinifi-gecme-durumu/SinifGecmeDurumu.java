@@ -1,5 +1,3 @@
-package Giris;
-
 import java.util.Scanner;
 
 public class SinifGecmeDurumu {
