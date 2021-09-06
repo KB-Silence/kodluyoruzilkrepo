@@ -10,7 +10,7 @@ public class OddNumber {
         do {
             System.out.print("Sayı Girin: ");
             number = scan.nextInt();
-            if (number % 2 != 0) total += number;
+            if (number % 2 == 1) total += number;
         } while (number > 0);
         System.out.printf("Girilen Tek Sayıların Toplamı: %s", total);
 
