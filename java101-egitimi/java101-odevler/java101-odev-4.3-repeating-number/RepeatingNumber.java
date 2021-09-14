@@ -13,7 +13,7 @@ public class RepeatingNumber {
         int[] list = {3, 7, 2, 3, 2, 16, 7, 21, 1, 3, 16, 1, 21, 16};
         int[] duplicate = new int[list.length];
         int startIndex = 0;
-        for (int i = 0; i < list.length; i++) { // i = 10 -- j = 0
+        for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list.length; j++) {
                 if ((i != j) && (list[i] == list[j])) {
                     if (!isFind(duplicate, list[i])) {
