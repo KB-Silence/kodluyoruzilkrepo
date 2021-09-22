@@ -7,10 +7,6 @@
 <br>
 
 ## **BAŞLIKLAR**
-- [KAYNAK](#kaynak)
-  - [**patika.dev**](#patikadev)
-  - [Patika.dev - Herkes İçin Temel Dersler eğitimi kapsamındaki içeriklere göre hazırlanmıştır.](#patikadev---herkes-i̇çin-temel-dersler-eğitimi-kapsamındaki-içeriklere-göre-hazırlanmıştır)
-  - [**BAŞLIKLAR**](#başliklar)
 - [Frontend ve Backend'e Giriş](#frontend-ve-backende-giriş)
   - [Frontend Nedir?](#frontend-nedir)
   - [Backend Nedir?](#backend-nedir)
