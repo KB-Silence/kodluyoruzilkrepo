@@ -9,44 +9,57 @@
 
 ---
 ## **Başlıklar**
-- SQL Nedir?
-- Data Nedir?
-- Database Nedir?
-- DBMS Nedir?
-- RDBMS Nedir?
-- Query
-- - SELECT
-- - WHERE
-- Karşılaştırma ve Mantıksal Operatörler
-- LIKE ve ILIKE
-- Aggregate Fonksiyonlar
-- Terminalde PSQL Kullanımı
-- ORDER BY
-- GROUP BY
-- - HAVING
-- LIMIT
-- OFFSET
-- ALIAS
-- Tablo Yönetimi
-- - Tablo Oluşturma
-- - Tablo Silme
-- INSERT, UPDATE, DELETE Sorguları
-- PRIMARY KEY ve FOREIGN KEY
-- Veri Tipleri
-- NOT NULL, UNIQUE Kısıtlamaları
-- - ALTER Kullanımı
-- JOIN Kavramları
-- - INNER JOIN
-- - LEFT JOIN
-- - RIGHT JOIN
-- - FULL JOIN
-- UNION
-- INTERSECT
-- EXCEPT
-- SUBQUERIES
-- - ANY ve ALL
+- [SQL Nedir?](#sql-structered-query-language-nedir)
+- [Data(Veri) Nedir?](#dataveri-nedir)
+- [Database(Veritabanı)Nedir?](#databaseveritabanı-nedir)
+- [Database Management System(DBMS) Nedir?](#database-management-systemdbms-nedir)
+- [İlişkisel Veritabanı Yönetim Sistemleri(RDBMS)](#i̇lişkisel-veritabanı-yönetim-sistemleri)
+- [Query(Sorgu)](#querysorgu)
+  - [Select](#select)
+  - [Where](#where)
+- [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
+- [Mantıksal Operatörler](#mantıksal-operatörler)
+- [LIKE ve ILIKE](#like)
+-[Aggregate Fonksiyonlar](#aggregate-fonksiyonlar)
+- [Terminalde PSQL Kullanımı](#terminalde-psql-kullanımı)
+- [ORDER BY](#order-by)
+- [GROUP BY](#group-by)
+  - [HAVING](#having)
+- [LIMIT](#limit)
+- [OFFSET](#offset)
+- [ALIAS](#alias-as)
+- [Tablo Yönetimi](#tablo-yönetimi)
+  - [Tablo Oluşturma](#tablo-oluşturmak)
+  - [Tablo Silme](#tablo-silmek)
+- [INSERT](#insert)
+- [UPDATE](#update)
+- [DELETE](#delete)
+- [PRIMARY KEY](#primary-key)
+- [FOREIGN KEY](#foreign-key)
+- [Veri Tipleri](#veri-tipleri)
+  - [Sayısal Veri Tipleri](#sayısal-veri-tipleri)
+  - [Karakter Veri Tipleri](#karakter-veri-tipleri)
+  - [Boolean Veri Tipleri](#boolean-veri-tipi)
+  - [Zaman/Tarih Veri Tipleri](#zaman--tari̇h-veri-tipleri)
+- [NOT NULL](#not-null)
+  - [Alter ve NOT NULL](#alter-ve-not-null)
+- [UNIQUE](#unique)
+  - [Alter ve UNIQUE](#alter-ve-unique)
+- [CHECK](#check)
+  - [ALTER ve CHECK](#alter-ve-check)
+- [JOIN KAVRAMI (Birleştirme)](#join-kavrami-birleştirme)
+  - [INNER JOIN](#inner-join)
+  - [LEFT JOIN](#left-join)
+  - [RIGHT JOIN](#right-join)
+  - [FULL JOIN](#full-join)
+- [UNION](#union)
+- [INTERSECT](#intersect)
+- [EXCEPT](#except)
+- [SUBQUERIES](#subqueries-alt-sorgular)
+  - [ANY](#any)
+  - [ALL](#all)
 ---
-<br/><br/><br/><br/><br/>
+<br/><br/><br/>
 
 # SQL *(Structered Query Language)* Nedir?
 SQL, verileri yönetmek ve tasarlamak için kulalnılan bir dildir. SQL, veritabanı yönetim sisteleri ile ilişki kurmayı sağlayacan declarative yani bildirimsel bir 4.nesil programlama dilidir.  
@@ -61,14 +74,14 @@ SQL'in, ***DBMS(Database Management System)*** ile nasıl çalıştığının, a
 <br/>
 
 # Data(Veri) Nedir?
-    Ölçüm, sayım, deney, gözlem veya araştırma sonucuyla elde edilen ham bilgilerdir.
+Ölçüm, sayım, deney, gözlem veya araştırma sonucuyla elde edilen ham bilgilerdir.
 
 <br/>
 
 # Database(Veritabanı) Nedir?
-    Verilerin organize bir şekilde depolanmasını ve belirli işlemlerle modifiye edilmesini sağlayan sistemlerdir.
+Verilerin organize bir şekilde depolanmasını ve belirli işlemlerle modifiye edilmesini sağlayan sistemlerdir.
 
-### Düzenli verilere sahip olursak;
+### **Düzenli verilere sahip olursak**;
 - İleriye yönelik geliştirici kararlar verebiliriz.
 - Hatalarımızı daha kolay çözeriz.
 - Geleceğe yönelik başarılı tahminlerde bulunabiliriz.
@@ -109,7 +122,7 @@ Farklı ihtiyaçlara göre çeşitli veritabanı yönetim sistemleri bulunur.
 - PostgreSQL
 
 # Query(Sorgu)
-    SQL komutlarını içeren sorgu cümleleridir. SQL komutlarının büyük-küçük harf duyarlılıkları(Case Insensitive) yoktur.
+SQL komutlarını içeren sorgu cümleleridir. SQL komutlarının büyük-küçük harf duyarlılıkları(Case Insensitive) yoktur.
 
 <br/>
 
@@ -145,7 +158,7 @@ Operatör    |   Açıklama    | Operatör  | Açıklama
 <br/>
 
 ## **Mantıksal Operatörler**
-    Çoğu durumda birden fazla koşulu gerçekleştirmek isteriz bunun için mantıksal operatörlerden faydalanırız.
+Çoğu durumda birden fazla koşulu gerçekleştirmek isteriz bunun için mantıksal operatörlerden faydalanırız.
 
 ## **AND (Ve)**
 Veri gelmesi için AND operatörünün sağına ve soluna yazılan koşulların ikisinin de TRUE sonuç döndürmesi gerekiyor. Eğer koşullardan bir tanesi TRUE diğeri FALSE sonuç dönerse işlem FALSE olur ve veri getirilmez.
@@ -160,13 +173,13 @@ SELECT * FROM table_name WHERE condition OR condition
 ```
 
 ## **BETWEEN AND**
-    Girilen 2 değer arasındaki verileri (girilen değerler dahil) getirmek için kullanılır.
+Girilen 2 değer arasındaki verileri (girilen değerler dahil) getirmek için kullanılır.
 ```SQL
 SELECT * FROM table_name WHERE column_name BETWEEN value AND value
 ```
 
 ## **IN**
-    Çok fazla değere göre sorgulama yapmak istiyorsak, istenilen değerli liste haline getirip IN operatörü ile kullanabiliriz.
+Çok fazla değere göre sorgulama yapmak istiyorsak, istenilen değerli liste haline getirip IN operatörü ile kullanabiliriz.
 ```SQL
 SELECT column_name, column_name, ... FROM table_name
 WHERE column_name IN (value1, value2, value3 ...)
@@ -200,12 +213,12 @@ WHERE condition_column_name LIKE 'P%'
 <br/>
 
 # Aggregate Fonksiyonlar
-    Aggregate fonksiyonlar yardımıyla veri kümelerimiz üzerinde işlemler yapabilir ve bu işlemlerden sonuçlar çıkarabiliriz.
+Aggregate fonksiyonlar yardımıyla veri kümelerimiz üzerinde işlemler yapabilir ve bu işlemlerden sonuçlar çıkarabiliriz.
     
-    - Bir veritabanında toplam kaç kullanıcı var?
-    - Bir veritabanındaki filmleri ortalama uzunluğu nedir?
+- Bir veritabanında toplam kaç kullanıcı var?
+- Bir veritabanındaki filmleri ortalama uzunluğu nedir?
 
-        gibi belirli veri kümelerinden tek bir sonuç çıkarmak için aggregate fonksiyonları kullanırız.
+gibi belirli veri kümelerinden tek bir sonuç çıkarmak için aggregate fonksiyonları kullanırız.
 ## **Bazı Aggregate Fonksiyonlar**
 - AVG -> Sayısal değerlerden oluşan sütunun ortalama değerini gösterir.
 - SUM -> Sayısal değerlerden oluşan sütunda bulunan verilerin hepsini toplar ve toplam sonucu gösterir.
@@ -247,50 +260,50 @@ psql -h host_name -p port -U <username> <db_name>
 ```
 
 ## **Veritabanlarını listelemek**
-```
+```powershell
 \l
         veya
 \list
 ```
 
 ## **Veritabanlarına bağlanmak**
-```
+```powershell
 \c DB_name
                     veya
 \connect DB_name
 ```
 
 ## **Veritabanındaki tabloları listelemek**
-```
+```powershell
 \dt
 ```
 
 ## **Bir tablonun sütunlarını ve tablo detaylarını görmek**
-```
+```powershell
 \dt table_name
                     ve
 \d+ table_name
 ```
 
 ## **Yeni veritabanı oluşturmak**
-```
+```SQL
 CREATE DATABASE db_name
 ```
 
 ## **Yeni tablo oluşturmak**
-```
+```SQL
 CREATE TABLE table_name (
     <column_name> <data_type> <constraint>
     ...
 )
 ```
 ## **Tablodaki sütun ismini değiştirmek**
-```
+```SQL
 ALTER TABLE table_name RENAME COLUMN column_name TO new_column_name
 ```
 
 ## **Sütuna UNIQUE kısıtlaması eklemek**
-```
+```SQL
 ALTER TABLE table_name ADD CONSTRAINT constraint_name UNIQUE(column_name)
 ```
 
@@ -298,7 +311,7 @@ ALTER TABLE table_name ADD CONSTRAINT constraint_name UNIQUE(column_name)
 PSQL terminal ekranında çıkmak için CTRL + C kombinasyonunu veya \q komutunu kullanabilirsiniz.
 
 # ORDER BY
-    ORBER BY anahtar kelimesi sayesinde herhangi bir sütunda bulunan değerlere göre artan veya azalan şekilde sıralama yapabiliriz.
+ORBER BY anahtar kelimesi sayesinde herhangi bir sütunda bulunan değerlere göre artan veya azalan şekilde sıralama yapabiliriz.
 > A'dan Z'ye | Z'den A'ya  
 > ya da  
 > 0'dan 9'a | 9'dan 0'a
@@ -318,7 +331,7 @@ ORDER BY column_name ASC, column_name DESC
 # GROUP BY
 Aynı değerlere sahip verileri gruplamamızı sağlar. GROUP BY komutu verileri bir veya daha fazla sütunla gruplamak için aggregate fonksiyonları kullanır. 
 
-    (COUNT, MAX, MIN, AVG, SUM)
+> (COUNT, MAX, MIN, AVG, SUM)
 ```SQL
 SELECT column_name(s) FROM table_name
 GROUP BY column_name(s)
@@ -360,8 +373,8 @@ SELECT column_name AS alias FROM table_name AS alias
 -------------------------------------------
 SELECT first_name AS f FROM customers AS c
 ```
-
-# Tablo Oluşturmak
+# Tablo Yönetimi
+## Tablo Oluşturmak
 SQL ile yeni bir tablo oluşturmak için CREATE anahtar kelimesi kullanılır. Sütunlara verilecek isim, sütunların veri tipi ve varsa sütunlarda bulunacak kısıtlama yapıları CREATE ile belirlenebilir.
 
 ```SQL
@@ -372,21 +385,21 @@ CREATE TABLE table_name (
 )
 ```
 
-# Tablo Silmek
-    Oluşturulan tabloyu DROP anahtar kelimesi ile silebiliriz.
+## Tablo Silmek
+Oluşturulan tabloyu DROP anahtar kelimesi ile silebiliriz.
 ```SQL
 DROP TABLE table_name
 ```
 
 # INSERT
-    Anahtar kelimesi ile tabloya yeni veriler ekleyebiliriz.
+Anahtar kelimesi ile tabloya yeni veriler ekleyebiliriz.
 ```SQL
 INSERT INTO table_name (column_name, column_name ...)
 VALUES (value1, value2, ...)
 ```
 
 # UPDATE
-    Anahtar kelimesi ile tabloda bulunan verileri güncelleyebiliriz.
+Anahtar kelimesi ile tabloda bulunan verileri güncelleyebiliriz.
 ```SQL
 UPDATE table_name
 SET column_name = value,
@@ -398,7 +411,7 @@ WHERE condition
 ```
 
 # DELETE
-    Anahtar kelimesi ile tabloda bulunan verileri silebiliriz.
+Anahtar kelimesi ile tabloda bulunan verileri silebiliriz.
 ```SQL
 DELETE FROM table_name WHERE condition
 
@@ -408,15 +421,15 @@ DELETE FROM table_name WHERE condition
 # PRIMARY KEY
 Bir tabloda bulunan veri sıralarını birbirinden ayırmamızı sağlayan bir kısıtlama(constraint) yapısıdır. Tabloda bulunan veri sıralarına ait "benzersiz tanımlayıcıdır."
 
-    - Benzersiz(Unique) olmalıdır.
-    - NULL değere sahip olamaz.
-    - Bir tabloda en fazla bir tane PRIMARY KEY bulunur.
+- Benzersiz(Unique) olmalıdır.
+- NULL değere sahip olamaz.
+- Bir tabloda en fazla bir tane PRIMARY KEY bulunur.
 
 # FOREIGN KEY
 Bir tabloda bulunan herhangi bir sütundaki verilerin genelde başka bir tablo sütununa referans vermesi durumudur. Tablolar arası ilişki kurulmasını sağlar.
 
-    - Bir tabloda birden fazla sütun FOREIGN KEY olarak tanımlanabilir.
-    - Aynı sütun içerisinde aynı değerler bulunabilir.
+- Bir tabloda birden fazla sütun FOREIGN KEY olarak tanımlanabilir.
+- Aynı sütun içerisinde aynı değerler bulunabilir.
 
 # Veri Tipleri
 
@@ -445,10 +458,10 @@ text | - | veriable unlimited length
 Sınırlı sayıda karakter kullanımı için VARCHAR veya CHAR veri tipleri kullanılır. VARCHAR veri tipi doldurulmayan karakterleri yok sayar, CHAR veri tipi ise doldurulmayan karakterler için boşluk bırakır. Sınırsız karakter kullanımı için ise TEXT veri tipi kullanılır.
 
 ## **Boolean Veri Tipi**
-    TRUE, FALSE veya NULL(bilinmeyen) değerlerini alabilirler.
+TRUE, FALSE veya NULL(bilinmeyen) değerlerini alabilirler.
 
-    - TRUE: true, yes, on, 1
-    - FALSE: false, no, off, 0
+- **TRUE:** true, yes, on, 1
+- **FALSE:** false, no, off, 0
 
 ## **ZAMAN / TARİH Veri Tipleri**
 | TYPE | | VALUE |
@@ -465,7 +478,7 @@ interval[fields][(p)]|-|time interal
 # NOT NULL
 Birçok durumda herhangi bir sütuna yazılacak olan verilere belirli kısıtlamalar getirebiliriz. Örneğin; kullanıcı adı sütununda bilinmeyen(NULL) değerlerin olmasını isteyebiliriz. Bu durumda ilgili sütunda NOT NULL constraint kullanılır.
 
-    NULL bilinmeyen veri anlamına gelir. Boş string veya 0 verilerinden farklıdır.
+> NULL bilinmeyen veri anlamına gelir. Boş string veya 0 verilerinden farklıdır.
 
 > **Employees tablosu oluşturalım ve tablodaki first_name ile last_name sütunlarına bilinmeyen veri girilmesini engellemek için NOT NULL kısıtlama yapısını kullanalım.**
 
@@ -479,7 +492,7 @@ CREATE TABLE employees (
 ```
 
 ## **ALTER ve NOT NULL**
-    ALTER anahtar kelimesi varolan bir tabloda değişiklik yapmak için kullanılır.
+ALTER anahtar kelimesi varolan bir tabloda değişiklik yapmak için kullanılır.
 ```SQL
 ALTER TABLE table_name
 ALTER COLUMN column_name
@@ -561,9 +574,9 @@ FULL JOIN TABLE2 ON table1.column_name = table2.column_name;
 ```
 
 # UNION
-    UNION operatörü sayesinde farklı SELECT sorgularıyla oluşan sonuçları tek bir sonuç kümesi haline getiririz.
+UNION operatörü sayesinde farklı SELECT sorgularıyla oluşan sonuçları tek bir sonuç kümesi haline getiririz.
 
-    UNION operatörü kullanılan sorguların, sütun sayıları eşit olmalıdır ve sütunlardaki veri tipleri eşleşmelidir.
+UNION operatörü kullanılan sorguların, sütun sayıları eşit olmalıdır ve sütunlardaki veri tipleri eşleşmelidir.
 ```SQL
 (
 SELECT column_name, column_name
@@ -614,7 +627,7 @@ SELECT column_name, column_name FROM TABLE2
 <br/>
 
 # Subqueries (Alt Sorgular)
-    Bir sorgu içerisinde, o sorgunun ihtiyaç duyduğu veri veya verileri getiren sorgulardır.
+Bir sorgu içerisinde, o sorgunun ihtiyaç duyduğu veri veya verileri getiren sorgulardır.
 
 ```SQL
 SELECT * FROM table_name
@@ -632,9 +645,9 @@ FROM table_name WHERE condition (
 ```
 
 ## **ANY ve ALL Operatörleri**
-    Any ve All operatörleri sıklıkla kullanılır ve tek bir sütunda bulunan bir değerle bir değer dizisinin karşılaştırılmasını sağlar.
+Any ve All operatörleri sıklıkla kullanılır ve tek bir sütunda bulunan bir değerle bir değer dizisinin karşılaştırılmasını sağlar.
 ## **ANY**
-    Alt sorgudan gelen herhangi bir değerin koşulu sağlanması durumunda TRUE olarak ilgili değerin koşulu sağlamasını sağlar.
+Alt sorgudan gelen herhangi bir değerin koşulu sağlanması durumunda TRUE olarak ilgili değerin koşulu sağlamasını sağlar.
 ```SQL
 SELECT first_name, last_name FROM author
 WHERE id = ANY
@@ -647,7 +660,7 @@ WHERE id = ANY
 >Alt sorgudan gelebilecek iki ID değeri var, bu ID değerinin her ikisi de birbirinden bağımsız olarak ana sorgudaki ID sütununda bulunan değerler ile eşleştiği için sorgu sonucunda oluşan sanal tabloda ID değeri 4 ve 5 olan yazarlara ait first_name ve last_name değerleri getirilir.
 
 ## **ALL**
-    Alt sorgudan gelen tüm değerlerin koşulu sağlaması durumunda TRUE olarak döner.
+Alt sorgudan gelen tüm değerlerin koşulu sağlaması durumunda TRUE olarak döner.
 ```SQL
 SELECT first_name, last_name FROM author
 WHERE id = ALL
