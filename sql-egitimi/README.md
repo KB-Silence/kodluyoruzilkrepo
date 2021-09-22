@@ -86,7 +86,7 @@ Verilerin organize bir şekilde depolanmasını ve belirli işlemlerle modifiye 
 - Hatalarımızı daha kolay çözeriz.
 - Geleceğe yönelik başarılı tahminlerde bulunabiliriz.
 
-Örneğin, EXCEL benzeri yazılımlar sayesinde verilerimizi saklayabiliriz. Neden bir veritabanına ihtiyaç duyalım?
+**Örneğin, EXCEL benzeri yazılımlar sayesinde verilerimizi saklayabiliriz. Neden bir veritabanına ihtiyaç duyalım?**
 
 ### Veritabanı sayesinde;
 - Sütunlarda bulunacak verilerin aynı veri tipinde olmasını garanti ederiz.
