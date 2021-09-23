@@ -48,6 +48,16 @@
     - [Tablolar](#tablolar)
     - [Bağlantı ve Resim Eklemek](#bağlantı-ve-resim-eklemek)
     - [Alıntı](#alıntı)
+- [İleri Düzey GIT Eğitimi](#i̇leri-düzey-git-eğitimi)
+  - [Commit, Diff, Log, Amend](#commit-diff-log-amend)
+    - [Commit Listesini Nasıl Görürüz?](#commit-listesini-nasıl-görürüz)
+    - [Son Commit İşlemini Nasıl Değiştirebiliriz?](#son-commit-i̇şlemini-nasıl-değiştirebiliriz)
+    - [Commit İşlemini Nasıl Geri Alırız?](#commit-i̇şlemini-nasıl-geri-alırız)
+    - [Commit İşlemini Nasıl Silebiliriz?](#commit-i̇şlemini-nasıl-silebiliriz)
+    - [Commitler Arasındaki Farkları Nasıl Görürüz?](#commitler-arasındaki-farkları-nasıl-görürüz)
+  - [Branch İşlemleri](#branch-i̇şlemleri)
+  - [Stash Kavramı](#stash-kavramı)
+  - [Merge Yöntemleri](#merge-yöntemleri)
 
 # GIT Eğitimi
 ## "git" Kelimesinin Anlamı
@@ -301,3 +311,56 @@ HTML'den aşina olduğumuz `<a>` etiketi yerine Markdown'da `[]()` karakterleri 
 ### Alıntı
 Yazının içinde alıntı kullanmak için metinin başına `>` karakteri koyulur.
 > Alntı bir metin.
+# İleri Düzey GIT Eğitimi
+## Commit, Diff, Log, Amend
+### Commit Listesini Nasıl Görürüz?
+- `git log`  
+- `git log -n 1`
+  - En yukardan 1. sıradaki commiti getirir.
+### Son Commit İşlemini Nasıl Değiştirebiliriz?
+- `git commit --amend`
+- `git commit --amend -m "commit message"`
+### Commit İşlemini Nasıl Geri Alırız?
+- `git revert <commit_ID>`
+### Commit İşlemini Nasıl Silebiliriz?
+- `git reset --hard <commit_ID>`
+  - Proje dosyalarını ve içeriğini belirttiğimiz ID'deki `commite` göre düzenler ve o `committen` sonraki `commitleri` siler.
+### Commitler Arasındaki Farkları Nasıl Görürüz?
+- `git diff 329c14c8a3f5aba1a7b..5e5f61368f12328af50 index.md`
+  - `index.md` dosyası için belirtilen `commit_ID` lere göre farklılıkları gösterir.
+## Branch İşlemleri
+Bir ekip ile beraber çalışıyorsanız sizden beklenen değişiklikleri oluşturacağınız yeni bir branch(dal) üzerinde yaparsınız. Daha sonrasında bu branch'i ana branch olan master ile birleştirirsiniz.
+- `git branch`
+  - Repoda bulunan branchleri gösterir.
+- `git branch <branch_name>`
+  - Repoda yeni bir branch oluşturur. Aynı isimde bir branch varsa hata verir.
+- `git checkout <branch_name>`
+  - Oluşturulan branchler arasında geçir yapar.
+- `git checkout -b <branch_name>`
+  - Verilen isimde bir branch oluşturur ve direkt o branch'a geçiş yapar.
+- `git branch -D <branch_name>`
+  - Oluşturulan branch'i siler.
+## Stash Kavramı
+Bazen `Commit` işlemi yaptıktan sonra yüzlerce satır komut yazarsınız. Sonra birden yazdığınız kodlardan önceki versiyon üzerinde değişiklik yapmanız gerekebilir. Bu durumda bu yazdığınız komutları bir yere saklamanız gerekir. `Stash` bu senaryoda bizi çok önemli bir sorundan kurtarıyor. Örneğin bir değişiklik üzerinde çalışırken başka bir konu ile ilgili kritik bir sorun bildirildiğinde yapmakta olduğunuz işi yarım bırakıp yeni soruna odaklanmak zorunda kalabilirsiniz. Bu gibi durumlarda yeni sorun ile ilgilenmeye başlamak için önceki değişikliklerinizi kaybetmeden yeni ve temiz bir branch oluşturmalısınız. Yarım kalan değişiklikleri kayıt altına almak için `git stash` komutunu kullanmalısınız.
+
+`git stash` ile üzerinde çalıştığımız ancak henüz `commi` etmediğimiz değişikliklerin geçici olarak `Git` tarafından kayıt altına alınmasını ve aktif branch'in herhangi bir değişikliğin olmadığı temiz bir duruma getirilmesini sağlarız.
+- `git stash`
+  - Son committen itibaren yapmış olduğumuz tüm değişiklikleri `stash`'te saklar. 
+  - Fakat saklanan bu veri commit olarak tutulmaz. Geçici olarak tutulur.
+- `git stash list`
+  - `Stash`'te tutulan değişiklikleri listeler.
+- `git stash clear`
+  - `Stash`'te tutulan değişiklikleri siler.
+- `git stash pop`
+  - `Stash`'te tutulan verilerden en üsttekini getirir.
+  - Değişikliği uygular ve `stash` listesinden kaydı siler.
+- `git stash apply stash@{stash_ID}`
+  - Girilen ID ye göre `Stash`'te tutulan değişikliği getirir.
+  - Değişikliği uygular ve listede saklamaya devam eder.
+## Merge Yöntemleri
+- `git merge <branch_name>`
+  - İki branch'in ortak commit'ini buluyor ve birleştirilecek her iki branch'in son commitine gidiyor ve bu ikisi arasındaki değişiklikleri aktif olarak içerisinde bulunduğumuz branch'e uyguluyor.
+  - Ortak commit ile son commit arasındaki farkları uyguluyor
+  - Eklenen branchteki commitleri master branch'in commit geçmişine ekliyor.
+- `git merge --squash <branch_name>`
+  - Normal merge kullanımında işlemi açıklayacak bir commit ekleme fırsatı yoktu fakat squash ile olan kullanımda merge işlemini açıklamak için commit ekleme imkanımız olur ve eklenen branchteki commitleri tek bir committe birleştirip master branch'e aktarır.
