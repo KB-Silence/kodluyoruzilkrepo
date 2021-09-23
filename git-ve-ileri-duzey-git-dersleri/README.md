@@ -7,10 +7,6 @@
 <br>
 
 ## **BAŞLIKLAR**
-- [KAYNAK](#kaynak)
-  - [**patika.dev**](#patikadev)
-  - [Patika.dev - GIT ve İleri Düzey GIT eğitimleri kapsamındaki içeriklere göre hazırlanmıştır.](#patikadev---git-ve-i̇leri-düzey-git-eğitimleri-kapsamındaki-içeriklere-göre-hazırlanmıştır)
-  - [**BAŞLIKLAR**](#başliklar)
 - [GIT Eğitimi](#git-eğitimi)
   - ["git" Kelimesinin Anlamı](#git-kelimesinin-anlamı)
   - [GIT'in Tarihsel Gelişimi](#gitin-tarihsel-gelişimi)
