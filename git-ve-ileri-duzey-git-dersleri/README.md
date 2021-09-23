@@ -184,9 +184,9 @@ Repository üzerindeki yapılan değişikliklerden sonra dosyalar arasında olu�
 - Çalışma dizini ve Staged ortamı arasındaki farklılıkları görmek için
   - `git diff --staged`
 ## .gitignore Ne İşe Yarar? Nasıl Kullanılır?
-.gitignore dosyası projemizin kök dizinine oluşturulan düz bir metin dosyasıdır. Local çalışma alanındaki takip edilmesini istemediğimiz, takım arkadaşlarımız için gerekmeyen dosyalar varsa veya bu dosyaların boyutu repoya atmaya gerek olmayacak kadar büyük ölçekli ise gitignore kullanmamız gerekiyor.
+`.gitignore` dosyası projemizin kök dizinine oluşturulan düz bir metin dosyasıdır. Local çalışma alanındaki takip edilmesini istemediğimiz, takım arkadaşlarımız için gerekmeyen dosyalar varsa veya bu dosyaların boyutu repoya atmaya gerek olmayacak kadar büyük ölçekli ise `.gitignore` kullanmamız gerekiyor.
 
-Bu dosyaları .gitignore dosyasına eklersek GIT bu dosyaları artık takip etmez. Üstelik bu işlemler yapılırken halihazırdaki dosyaları hiç bir şekilde etkilemez.
+Bu dosyaları `.gitignore` dosyasına eklersek `GIT` bu dosyaları artık takip etmez. Üstelik bu işlemler yapılırken halihazırdaki dosyaları hiç bir şekilde etkilemez.
 ### Hangi Tür Dosyalar?
 - Paket yöneticisinden indirilen bağımlılıklar.
 - Image ve video dosyaları(dosya boyutları fazla olabilir).
@@ -198,32 +198,32 @@ Bu dosyaları .gitignore dosyasına eklersek GIT bu dosyaları artık takip etme
 - Yararsız sistem dosyaları. **(MacOS işletim sisteminin .DS_Store dosyası)**
 - dist gibi oluşturulan dosyalar
 
-Bunlar haricinde GIT'in takip etmesini istemediğiniz ve repository'e göndermek istemediğiniz herhangi bir dosya da olabilir.
+Bunlar haricinde `GIT`'in takip etmesini istemediğiniz ve repository'e göndermek istemediğiniz herhangi bir dosya da olabilir.
 ### Nasıl Oluşturulur?
-Reponuzu oluştururken **add .gittignore file** seçeneğine tıklayarak reponuzla beraber oluşturabilirsiniz. Aynı şekilde editörde .gitignore şeklinde de oluşturulabilir.
+Reponuzu oluştururken `add .gittignore file` seçeneğine tıklayarak reponuzla beraber oluşturabilirsiniz. Aynı şekilde editörde `.gitignore` şeklinde de oluşturulabilir.
 - Terminalden oluşturmak için
   - `echo some-text or nothing > .gitignore`
-  - Buradaki **some-text or nothing** kısmı .gitignore dosyasına yazılmasını istediğiniz metini ekler. Hiçbir şey de yazmayabilirsiniz.
+  - Buradaki **some-text or nothing** kısmı `.gitignore` dosyasına yazılmasını istediğiniz metini ekler. Hiçbir şey de yazmayabilirsiniz.
 ### Nasıl Kullanılmalı?
-.gitignore dosyasının her satırına takip edilmesini istemediğimiz dosyaları veya dizinleri yazarak göz ardı edebiliriz.  
+`.gitignore` dosyasının her satırına takip edilmesini istemediğimiz dosyaları veya dizinleri yazarak göz ardı edebiliriz.  
 **Tabii bu dosyaları yazarken bize kolaylık sağlayan bazı formatlar var**
 - .env
-- Dizinleri klasör isminin sonuna '/' işareti ekleyerek belirtiriz.
+- Dizinleri klasör isminin sonuna `/` işareti ekleyerek belirtiriz.
   - node-modules/
   - dist/
   - logs/
-- Bir klasörün içerisindeki **'example.txt'** haricindeki dosyaların izlenmesini istemiyorsak '!' işaretini kullanırız.
+- Bir klasörün içerisindeki `example.txt` haricindeki dosyaların izlenmesini istemiyorsak `!` işaretini kullanırız.
   - !files/example.txt
-  - Daha öncesinde 'files' klasörü .gitignore dosyasına eklenmişse sonradan '!' kullanımı ile işlem yapmak işe yaramayacaktır.
+  - Daha öncesinde `files` klasörü `.gitignore` dosyasına eklenmişse sonradan `!` kullanımı ile işlem yapmak işe yaramayacaktır.
   - files/
   - !files/example.txt
-- .gitignore dosyasında yorum satırı oluşturmak için '#' karakterini kullanırız.
+- `.gitignore` dosyasında yorum satırı oluşturmak için `#` karakterini kullanırız.
   - **\# production**
   - build/
   - **\# dependencies**
   - node_modules/
 ### Dikkat Edilmesi Gerekenler
-Eğer projeyi 'git add .' veya 'git commit' etmişseniz sonrasında '.gitignore' dosyasına eklemek istediğiniz dosyası ekleseniz de bu işlem gerçekleşmeyecektir ve o dosyanız reponuzda hala GIT ile takip edilecektir.
+Eğer projeyi `git add .` veya `git commit` etmişseniz sonrasında `.gitignore` dosyasına eklemek istediğiniz dosyası ekleseniz de bu işlem gerçekleşmeyecektir ve o dosyanız reponuzda hala `GIT` ile takip edilecektir.
 - Bu gibi bir durum için
   - `git rm --cached FILENAME`
 
@@ -239,8 +239,8 @@ Son olarak, hangi `.gitignore` dosyalarını eklememiz gerektiğini, hangi dil, 
 Global olarak düzenlemek istediğimiz, `.gitignore` dosyaları için
 - **[.gitignore/Global](https://github.com/github/gitignore/tree/master/Global)**
 ## Markdown Nedir?
-Markdow, John Gruber ve Aaron Swartz tarafından geliştirilen ve 2004 yılından bu yana kullanılan metinden HTML'e (text-to-HTML) dönüşüm için kullanılan hafif bir işaretleme dilidir.
-GitHub gibi platformları kullananların aşina olduğu Markdown formatı, yaygın kanının aksine sadece README dosyaları oluşturmak için kullanılamaz. Temel amaç okunabilirliği ve kullanılabilirliği arttırmaktır. Basitliği ve sadeliği sayesinde forumlarda ileti yazmaktan, kitap yazmaya kadar pek çok yerde kullanılabilir. Asıl güçlü olduğu kısım klavyeden elinizi kaldırmadan tablolardan, matematiksel ifadelere kadar ihtiyaç duyduğunuz her şeyi oluşturabilmeniz ve sonrasında biçimlendirebilmenizdir.
+Markdow, `John Gruber` ve `Aaron Swartz` tarafından geliştirilen ve 2004 yılından bu yana kullanılan metinden `HTML'e (text-to-HTML)` dönüşüm için kullanılan hafif bir işaretleme dilidir.
+GitHub gibi platformları kullananların aşina olduğu Markdown formatı, yaygın kanının aksine sadece `README` dosyaları oluşturmak için kullanılamaz. Temel amaç okunabilirliği ve kullanılabilirliği arttırmaktır. Basitliği ve sadeliği sayesinde forumlarda ileti yazmaktan, kitap yazmaya kadar pek çok yerde kullanılabilir. Asıl güçlü olduğu kısım klavyeden elinizi kaldırmadan tablolardan, matematiksel ifadelere kadar ihtiyaç duyduğunuz her şeyi oluşturabilmeniz ve sonrasında biçimlendirebilmenizdir.
 ### Başlıklar
 HTML'de `<h1>, <h2>, <h3>` etiketleri ile aç-kapat yaparak oluşturduğumuz başlıkları, Markdown ile sadece `#` karakterini kullanarak oluşturabiliyoruz. Burada önemli olan nokta `#` karakterinden sonra boşluk bırakmaktır.
 
@@ -254,8 +254,8 @@ Yaygın kullanımda kalın yazmak için `**`, eğik yazmak için `*`, hem kalın
 - ***Eğik ve Kalın İfade***
 - ~~Üstü Çizili İfade~~ 
 ### Tek ve Çok Satırlı Kod Blokları
-- Tek satır kod bloğu için kodun başına ve sonuna `(backtick) karakteri eklenir.
-- Çok satır kod bloğu için kodun başına ve sonuna 3 adet ```(backtick) karakteri eklenir.
+- Tek satır kod bloğu için kodun başına ve sonuna `` `(backtick) `` karakteri eklenir.
+- Çok satır kod bloğu için kodun başına ve sonuna 3 adet `` ```(backtick) `` karakteri eklenir.
 
 Yazılım diline göre kod bloğundaki ifadelerin stillendirilmesini isterseniz, kod bloğunun başındaki 3 adet backstick ifadesinden sonra `javascript, python, css` gibi etiketler ekleyebilirsiniz.
 ### Yatay Çizgi
