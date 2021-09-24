@@ -18,3 +18,4 @@
   - Ofisler, çalışma ofisi`(WorkOffice)` veya departman ofisi`(DepartmentOffice)` olabilir.
   - Çalışanlar`(Employee)` sadece bir ofiste`(Office)` çalışabilir.
 - Bir üniversitenin`(University)`, 1 veya daha fazla departmanı`(Department)` olmalı.
+  - Bir departmanın`(Department)`, 1 tane ofisi`(DepartmentOffice)` olabilir.
