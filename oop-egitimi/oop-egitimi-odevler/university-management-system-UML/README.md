@@ -7,4 +7,14 @@
 `Not : Sınıflara ait nitelik ve davranışların belirtilmesine gerek yoktur.`
 
 ## **OUTPUT**
-![output114](https://user-images.githubusercontent.com/74976052/134735653-b33f3fe9-2686-4888-92a4-e8069a7caa4f.png)
+![output114](https://user-images.githubusercontent.com/74976052/134737284-c6a35a6f-19ce-4e50-b86b-18402ac54c07.png)
+
+<br>
+
+- Bir üniversitenin`(University)`, 1 veya daha fazla sınıflığı(`ClassRoom`) olmalı.
+- Bir üniversitenin`(University)`, 1 veya daha fazla çalışanı`(Employee)` olmalı.
+  - Çalışanlar, Profesör`(Professor)` veya Memur`(Officer)` olabilir.
+- Bir üniversitenin`(University)`, 1 veya daha fazla ofisi`(Office)` olmalı.
+  - Ofisler, çalışma ofisi`(WorkOffice)` veya departman ofisi`(DepartmentOffice)` olabilir.
+  - Çalışanlar`(Employee)` sadece bir ofiste`(Office)` çalışabilir.
+- Bir üniversitenin`(University)`, 1 veya daha fazla departmanı`(Department)` olmalı.
